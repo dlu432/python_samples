@@ -20,3 +20,19 @@ git reset HEAD <file>     Unstage the file to current commit (HEAD)
 git reset                 Unstage everything - retain changes
 git stash                 Discard all local changes, but save them for later
 git reset --hard          Discard everything permanently
+
+
+# Stash commands
+git stash                 Stash staged files
+git stash apply           Reapply stashed files
+git stash drop            Drop stashed files
+
+# Stash example
+git checkout master
+make some changes
+git stash
+git checkout -b branch2
+git stash apply
+git add <unstashed changes>
+git commit -m
+git push
