@@ -8,10 +8,15 @@ git push
 gitk --all      Show all branches
 
 
-#Merge remote branch1 to master branch1
+# Merge remote branch1 to master branch1
 git checkout master       Switch to master branch
 git pull                  Sync local master branch to remote master branch1
 git merge origin/branch1  Pull changes from remote origin/branch1 to local master branch
 git push                  Push new merge changes to remote origin/master branch
 
-  
+
+# Undo changes
+git reset HEAD <file>     Unstage the file to current commit (HEAD)
+git reset                 Unstage everything - retain changes
+git stash                 Discard all local changes, but save them for later
+git reset --hard          Discard everything permanently
